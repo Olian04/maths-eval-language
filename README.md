@@ -31,4 +31,8 @@ BNF syntax declaration:
 <symbol> ::= <string>
 ```
 
+## Resources
+
 BNF playground: https://bnfplayground.pauliankline.com/
+
+Implementing a language (tutorial): http://lisperator.net/pltut/
