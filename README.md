@@ -27,7 +27,7 @@ EBNF syntax declaration:
 <symbol> ::= <number> | <string>
 
 <EOL> ::= "\n"
-<number> ::= " "? [1-9]+ | [1-9]+ "." [0-9]+ " "?
+<number> ::= " "? "-"? [1-9]+ | [1-9]+ "." [0-9]+ " "?
 <string> ::= " "? ([a-z] | [A-Z])+ " "?
 <operation> ::= "*" | "-" | "/" | "^" | "+"
 ```
