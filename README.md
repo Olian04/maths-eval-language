@@ -38,6 +38,8 @@ BNF playground: https://bnfplayground.pauliankline.com/
 
 Implementing a language (tutorial): http://lisperator.net/pltut/
 
+EBFN Parser for nodejs (if all else fails): https://www.npmjs.com/package/ebnf
+
 ## Javascript Library (first implementation goal)
 
 ```js
