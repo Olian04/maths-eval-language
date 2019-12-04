@@ -36,3 +36,31 @@ BNF syntax declaration:
 BNF playground: https://bnfplayground.pauliankline.com/
 
 Implementing a language (tutorial): http://lisperator.net/pltut/
+
+## Javascript Library (first implementation goal)
+
+```js
+import { VM, evalExpression } from 'maths-eval';
+
+console.log(evalExpression('10 * (6^(4/3)) - 8')); // 101.02723557
+
+const maths = new VM({
+  context: {
+    someValue: 10,
+  },
+});
+
+maths.run(`
+  f(x) = x*2
+`);
+
+const output = maths.run(`
+  print(f(someValue))
+`);
+
+console.log(output); // [ 20 ]
+```
+
+## Rust compiler (seccond implementation goal)
+
+TBD
