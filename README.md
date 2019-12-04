@@ -14,21 +14,22 @@ print(z) # should print 20
 
 EBNF syntax declaration:
 ```bnf
-<syntax> ::= <row> | <row> <EOL> <syntax>
-<row> ::= <logic> | <comment> | <logic> <comment>
-<comment> ::= "#" <string>
-<logic> ::= <function> | <decleration>
-<function> ::= <symbol> "(" <function_arguments> ")"
-<function_arguments> ::= <symbol> | <symbol> <function_arguments>
-<decleration> ::= <signature> "=" <expression>
-<signature> ::= <function> | <symbol>
+<syntax> ::= <row> (<EOL> <syntax>)?
+<row> ::= (<logic>)? (<comment>)?
+<comment> ::= " "? "#" (<string> " "?)*
+<logic> ::= <function_call> | <decleration>
+
+<decleration> ::= (<function_declaration> | <string>) "=" <expression>
 <expression> ::= <signature> | "(" <expression> ")" | <expression> <operation> <expression>
-<operation> ::= "*" | "-" | "/" | "^" | "+"
+<signature> ::= <function_call> | <symbol>
+<function_call> ::= <string> "(" <symbol> ("," <symbol>)* ")"
+<function_declaration> ::= <string> "(" <string> ("," <string>)* ")"
+<symbol> ::= <number> | <string>
 
 <EOL> ::= "\n"
-<string> ::= <char> | <char> <string>
-<char> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
-<symbol> ::= <string>
+<number> ::= " "? [1-9]+ | [1-9]+ "." [0-9]+ " "?
+<string> ::= " "? ([a-z] | [A-Z])+ " "?
+<operation> ::= "*" | "-" | "/" | "^" | "+"
 ```
 
 ## Resources
