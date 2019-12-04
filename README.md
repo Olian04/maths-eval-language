@@ -12,7 +12,7 @@ y = 10
 print(z) # should print 20
 ```
 
-BNF syntax declaration:
+EBNF syntax declaration:
 ```bnf
 <syntax> ::= <row> | <row> <EOL> <syntax>
 <row> ::= <logic> | <comment> | <logic> <comment>
