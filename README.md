@@ -31,13 +31,11 @@ EBNF syntax declaration:
 <operation> ::= "*" | "-" | "/" | "^" | "+"
 ```
 
-## Resources
+### Resources
 
 BNF playground: https://bnfplayground.pauliankline.com/
 
 Implementing a language (tutorial): http://lisperator.net/pltut/
-
-EBFN Parser for nodejs (if all else fails): https://www.npmjs.com/package/ebnf
 
 ## Javascript Library (first implementation goal)
 
@@ -63,6 +61,12 @@ const output = maths.run(`
 console.log(output); // [ 101.02723557 ]
 ```
 
-## Rust compiler (seccond implementation goal)
+### Resources
 
-TBD
+EBFN Parser for nodejs (if all else fails): https://www.npmjs.com/package/ebnf
+
+## VSCode extensions (seccond implementation goal)
+
+### Resources
+
+VSCode language server extension (tutorial): https://code.visualstudio.com/api/language-extensions/language-server-extension-guide
