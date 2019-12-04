@@ -3,13 +3,12 @@
 Usage example (Minimal Viable Product)
 ```
 f(x) = x*2
-y = 5
-z = f(y)
 
-print(z) # should print 10
+y = 5
+print(f(y)) # should print 10
 
 y = 10
-print(z) # should print 20
+print(f(y)) # should print 20
 ```
 
 EBNF syntax declaration:
