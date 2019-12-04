@@ -51,14 +51,14 @@ const maths = new VM({
 });
 
 maths.run(`
-  f(x) = x*2
+  f(x) = x*(6^(4/3)) - 8
 `);
 
 const output = maths.run(`
   print(f(someValue))
 `);
 
-console.log(output); // [ 20 ]
+console.log(output); // [ 101.02723557 ]
 ```
 
 ## Rust compiler (seccond implementation goal)
